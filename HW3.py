@@ -31,7 +31,6 @@ class Magic_8_Ball:
 
     def __str__(self):
         return f", {self.answer_list}"
-        #return ','.join(self.answer_list)
 
 
     # create the shake_8_ball method

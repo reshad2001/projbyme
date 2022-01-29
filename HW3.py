@@ -136,11 +136,6 @@ def test():
     bot2.print_question_history()
     print()
 
-    #EXTRA POINTS
-    #Uncomment the lines below if you attempt the extra credit!
-    # print("Testing most_frequent method with 200 responses")
-    # bot2.most_frequent(200)
-
 
 # only run the main function if this file is being run (not imported)
 if __name__ == "__main__":

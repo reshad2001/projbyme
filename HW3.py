@@ -59,7 +59,6 @@ class Magic_8_Ball:
             answer = self.shake_8_ball()
             return answer
 
-
     # create the print_question_history method
     # prints "[answer index] question - answer" for each of the indices in the answer_history_list
     # from the first to the last with each on a separate line.  If there are no items in the

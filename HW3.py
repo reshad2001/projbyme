@@ -94,10 +94,6 @@ def main():
 
     # get the first question or quit
     getQuestion = input
-
-        # print question - answer
-
-        # get the next question or quit 
     
     while getQuestion != "quit":
         check_question = input

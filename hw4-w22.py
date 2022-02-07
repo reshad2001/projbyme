@@ -92,21 +92,18 @@ class Restaurant:
         self.cost = cost
         self.earnings = earnings
     
-    
     def has_item(self, item, quantity): 
-        pass
+        self.item = quantity - item
 
     def process_order(self, item, quantity):
         if self.has_item(item, quantity):
             self.inventory[item] = self.inventory.get(item) - quantity
    
     def stock_up(self, item, number):
-        pass
+        self.item = number + item
 
     def __str__ (self): 
         return "Hello, we are" + self.name + "This is current menu" + str(self.inventory.keys()) + "We charge" + self.cost + "per item. We have" + self.earnings + "in total."
-
-
 
 
 class TestAllMethods(unittest.TestCase):

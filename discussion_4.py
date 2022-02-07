@@ -99,8 +99,6 @@ class TestAllMethods(unittest.TestCase):
 		self.assertTrue(len(w1.items) > 0)
 		self.assertEqual(w1.items[0], self.item1)
 
-		pass
-
 
 	# Check to see whether the warehouse correctly return the item with the highest price
 	def test_warehouse_max_price(self):
@@ -112,7 +110,6 @@ class TestAllMethods(unittest.TestCase):
 		self.assert_equal(w2.get_max_price(), self.item1)
 		self.assert_equal(w2.get_max_price().price, 6)
 
-		pass
 
 	## Check to see whethercheck_warehouse_for_item works
 	def test_check_warehouse_for_item(self):
@@ -121,14 +118,13 @@ class TestAllMethods(unittest.TestCase):
 
 		# Case 1: check when there the item isn't in the warehouse
 		w3.check_warehouse_for_item(self.item1)
-		self.assertEqual(w3.itmes, self.item3, self.item1)
+		self.assertEqual(w3.itmes, [self.item3, self.item1])
+		self.assertEqual(len(w3.items), 2)
 
 		# Case 2: Check when the item is in the warehouse already
 		w3.check_warehouse_for_item(self.item1)
 		self.assertEqual(w3.itmes, [self.item3, self.item1])
-
-
-		pass
+		self.assertEqual(len(w3.items), 2)
 
 
 def main():

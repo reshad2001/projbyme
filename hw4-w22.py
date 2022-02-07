@@ -1,9 +1,8 @@
-
 import unittest
 
-## Name : 	
-## Student ID: 
-## People you worked with :
+## Name : Reshad Alam	
+## Student ID: 91578522
+## People you worked with : N/A
 
 
 # The Customer class
@@ -33,7 +32,8 @@ class Customer:
     # Submit_order takes a waiter, a restaurant and an amount as parameters, 
     # it deducts the amount from the customer’s card and calls the receive_payment method on the waiter object
     def submit_order(self, waiter, restaurant, amount): 
-        pass
+        self.load_card.append(amount)
+        self.receive_payment[restaurant(waiter)]
 
     # The __str__ method prints the customer's information.    
     def __str__(self):
@@ -67,7 +67,7 @@ class Waiter:
     # Receives payment from customer, and adds service fee to wallet 
     # then adds the money minus the service fee to the restaurant's earnings.
     def receive_payment(self, restaurant, money):
-        pass
+        return self.add_restaurant(restaurant[money])
 
     # Places an order at the restaurant.
 	# The waiter pays the restaurant the cost.

@@ -54,10 +54,10 @@ class FireReader():
         """
 
         # iterate through each row of the data
-        for i in self.raw_data:
+        for i in self.raw_data[1:]:
 
             # split up the row by column
-            seperated = i.split(' ')
+            seperated = i.split(',')
 
             # map each part of the row to the correct column
             self.data_dict['month'].append(seperated[0])
@@ -70,11 +70,10 @@ class FireReader():
         """
         This method should iterate through the area column and return
         the largest value.
-
+        
         For example, 1.2
         """
-
-        pass
+        return sorted(self.data_dict['area'])[-1]
 
 
     def most_fires_month(self):

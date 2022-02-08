@@ -185,15 +185,22 @@ class TestAllMethods(unittest.TestCase):
 	# Check that the restaurant can properly see when it is empty
     def test_has_item(self):
         # Set up to run test cases
+        s5 = Restaurant("Restaurant", self.inventory, self.cost)
+
+        if has_item in Restaurant > 0:
+            return True
+        else:
+            return False
 
         # Test to see if has_item returns True when a restaurant has enough items left
         # Please follow the instructions below to create three different kinds of test cases 
+
         # Test case 1: the restaurant does not have this food item: 
-        
+        self.assertTrue(s5.has_item(self.s5))
         # Test case 2: the restaurant does not have enough food item: 
-        
+        self.assertFalse(c3.has_item(self.s5)) 
         # Test case 3: the restaurant has the food item of the certain quantity: 
-        pass
+        self.assertEqual(len(s5.directory), 0)
 
 	# Test validate order
     def test_validate_order(self):
@@ -204,9 +211,10 @@ class TestAllMethods(unittest.TestCase):
         self.assertEqual(self.f2.validate_order(self.c1, self.s1, 'Burger', 1000), "Don't have enough money for that :( Please load more money!")
 
 		# case 2: test if the restaurant doesn't have enough food left in stock
+        self.assertEqual(self.f2.validate_order(self.c1, self.s1, 'Burger', 0), "Restaurant doesn't have enough food left in stock.")
 
 		# case 3: check if the waiter can order item from that restaurant
-        pass
+        self.assertEqual(self.f2.validate_order(self.c1, self.s1, '', 0), "Unable to order item from restaurant.")
 
     # Test if a customer can add money to their card
     def test_load_card(self):

@@ -73,6 +73,7 @@ class FireReader():
         
         For example, 1.2
         """
+
         return sorted(self.data_dict['area'])[-1]
 
 
@@ -83,11 +84,12 @@ class FireReader():
         finally return a string in the following format:
 
         'The month with the most fires was dec.'
-
+        
         You should replace 'dec' with the correct month.
         """
 
-        pass
+        return dict.get(self.data_dict['area'])[1:]
+
 
     def temp_of_largest(self):
         """
@@ -100,8 +102,6 @@ class FireReader():
         the FIRST index that matches your requested value, but for our purposes
         this is ok.
         """
-
-        pass
 
 
 class TestFireReader(unittest.TestCase):

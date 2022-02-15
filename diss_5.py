@@ -87,8 +87,16 @@ class FireReader():
         
         You should replace 'dec' with the correct month.
         """
+        counts = ()
 
-        return dict.get(self.data_dict['area'])[1:]
+        for i in self.data_dict['month']:
+            counts[i] = counts.get(1, 0) + 1
+
+        topMonth = sorted(counts.items(), key = lambda x: x[1], reverse = True[0][0])
+
+        return 'The month with the most fires was {}.'.format(topMonth)
+            
+        ##return dict.get(self.data_dict['area'])[1:]
 
 
     def temp_of_largest(self):
